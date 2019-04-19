@@ -1,5 +1,9 @@
 # Components
 
+Additional components for [Tapestry5 Framework](http://tapestry.apache.org/) version 5.4+
+
+Components are registered under the `sp` library name.
+
 ## Localized formatting components
 - OutputDate: `<t:sp.outputDate value="creationDate" />`
 - OutputDateTime: `<t:sp.outputDateTime value="creationTime" />`
