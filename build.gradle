@@ -1,0 +1,44 @@
+apply plugin: 'java'
+apply plugin: 'project-report'
+
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+apply plugin: "maven"
+
+group = 'solid.principles'
+version = '0.0.1'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    // tapestry 5.4-alpha repository
+    maven {
+        url "https://repository.apache.org/content/groups/staging"
+    }
+    mavenLocal() // For tapestry snapshot release built and installed locally
+}
+
+def tapestryVersion = '5.4.4'
+def slf4jVersion = '1.7.25'
+
+dependencies {
+    compile group: 'org.slf4j', name: 'slf4j-api', version: slf4jVersion
+
+    compile group: 'org.apache.tapestry', name: 'tapestry-core', version: tapestryVersion
+}
+
+jar {
+    manifest {
+        attributes ('Tapestry-Module-Classes': 'solid.principles.tapestry5.modules.Tapestry5ComponentsModule')
+    }
+}
+
+
+eclipse {
+    classpath {
+        downloadJavadoc = true
+    }
+}
