@@ -15,7 +15,7 @@ Components are registered under the `sp` library name.
 Currently this library is not published to any Maven repos. 
 
 - Clone/download the repository to your computer
-- Deploy it to your local maven repo: `gradle install`
+- Publish it to your local maven repo: `gradle publishToMavenLocal`
 - Add the library as a dependency to your project: `compile group: 'solid.principles', name: 'tapestry5-components', version: '0.0.1'`
 - Add to your project's build.gradle the below to find the library in your local repo: 
 
