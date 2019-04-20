@@ -10,6 +10,12 @@ Components are registered under the `sp` library name.
 - OutputMoney: `<t:sp.outputMoney value="price" />`
 - OutputPercent: `<t:sp.outputPercent value="vat" />`
 
+### Supported locales:
+* English - default
+* Hungarian - _hu
+
+Your contributions for other formats are welcome. (Preferably as a PR)
+
 # How to use it
 
 Currently this library is not published to any Maven repos. 
